@@ -5,7 +5,6 @@ const wrapperHeader = body.querySelector('.js-wrapper-header');
 const scrollObservers = document.querySelectorAll('.observer');
 let menuActive = false;
 
-
 const anime = lottie;
 
 anime.loadAnimation({
@@ -13,7 +12,7 @@ anime.loadAnimation({
     render: 'svg',
     loop: false,
     autoplay: false,
-    path: '/json/burger.json',
+    path: './burger.json',
 })
 
 burgerButton.addEventListener('click', (event) => {
