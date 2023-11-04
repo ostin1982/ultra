@@ -12,7 +12,7 @@ anime.loadAnimation({
     render: 'svg',
     loop: false,
     autoplay: false,
-    path: './burger.json',
+    path: './json/burger.json',
 })
 
 burgerButton.addEventListener('click', (event) => {
