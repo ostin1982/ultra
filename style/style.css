@@ -16,6 +16,64 @@ body {
     overflow: hidden;
 }
 
+@keyframes anime-1 {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -10px;
+    }
+}
+
+@keyframes anime-2 {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -20px;
+    }
+}
+
+@keyframes anime-3 {
+    0% {
+        left: -10px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes anime-4 {
+    0% {
+        left: -20px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes anime-5 {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    100% {
+        top: -2px;
+        left: 2px;
+    }
+}
+
+@keyframes anime-6 {
+    0% {
+        top: -2px;
+        left: 2px;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
 .button {
     display: flex;
     justify-content: center;
@@ -24,12 +82,8 @@ body {
     outline: none;
     border: none;
     background-color: transparent;
-    -moz-appearance: none;
     appearance: none;
-    -webkit-appearance: none;
     line-height: 1.5;
-    -webkit-user-select: none;
-    -moz-user-select: none;
     user-select: none;
     margin: 0;
     padding: 0;
@@ -55,12 +109,32 @@ body {
     line-height: 120%;
 }
 
+.button__header:hover {
+    background: #FFFFFF;
+}
+
+.button__header:hover .header__button-text {
+    color: #293743;
+}
+
 .button__main {
     width: calc(40% - 134px);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 16px;
+    
+}
+
+.button__main_svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    animation: anime-6 0.3s forwards;
+}
+
+.button__main:hover .button__main_svg {
+    animation: anime-5 0.3s forwards;
 }
 
 .header {
@@ -106,6 +180,10 @@ body {
     stroke: #FFFFFF;
 }
 
+.header__wrapper_2 {
+    background: #FFFFFF;
+}
+
 .header__wrapper_2 .header__info {
     border: 2px solid #293743;
     border-right: none;
@@ -130,6 +208,10 @@ body {
 
 .header__wrapper_2 .button__burger svg g g g path {
     stroke: #293743;
+}
+
+.header__wrapper_3 {
+    background: #293743;
 }
 
 .header__wrapper_3 .header__info {
@@ -273,12 +355,8 @@ body {
     outline: none;
     border-radius: 0;
     background-color: transparent;
-    -moz-appearance: none;
     appearance: none;
-    -webkit-appearance: none;
     line-height: 1.5;
-    -webkit-user-select: none;
-    -moz-user-select: none;
     user-select: none;
     margin: 0;
     color: #293743;
@@ -288,7 +366,7 @@ body {
     font-weight: 700;
     line-height: 90%;
     letter-spacing: 4px;
-    padding: 38px;
+    padding: 49px;
     text-decoration: none;
 }
 
@@ -335,6 +413,16 @@ body {
     height: 100vh;
 }
 
+.main__slider.swiper-slide::before {
+    content: '';
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(17, 27, 35, 0.60) 0%, rgba(25, 39, 50, 0.00) 51.8%);
+}
+
 .main__img {
     width: 100%;
     height: 100%;
@@ -348,6 +436,7 @@ body {
     right: 32px;
     display: flex;
     align-items: center;
+    z-index: 11;
 }
 
 .main__name {
@@ -379,23 +468,81 @@ body {
 
 .main__button {
     position: absolute;
-    top: 43px;
+    top: 50px;
     right: 32px;
     width: 144px;
     height: 30px;
 }
 
-.main__button .swiper-button-next,
-.main__button .swiper-button-prev {
-    color: #CEB78B;
-    top: 22px;
-    width: auto;
-    height: auto;
+.main__button .swiper-button-next {
+    background: url(../img/Arrow.svg) no-repeat;
+    width: 17px;
+    height: 30px;
 }
 
-.main__button .swiper-button-next::after,
+.main__button .swiper-button-prev {
+    background: url(../img/Arrow.svg) no-repeat;
+    transform: rotate(180deg);
+    width: 17px;
+    height: 30px;
+}
+
+.main__button .swiper-button-next::after {
+    position: absolute;
+    font-size: 0;
+    background: url(../img/Arrow.svg) no-repeat;
+    width: 17px;
+    height: 30px;
+    left: 0;
+    animation: anime-3 0.3s forwards; 
+}
+
+.main__button .swiper-button-next:hover::after {
+    animation: anime-1 0.3s forwards; 
+}
+
 .main__button .swiper-button-prev::after {
-    font-size: 30px;
+    position: absolute;
+    font-size: 0;
+    background: url(../img/Arrow.svg) no-repeat;
+    width: 17px;
+    height: 30px;
+    left: 0;
+    animation: anime-3 0.3s forwards; 
+}
+
+.main__button .swiper-button-prev:hover::after {
+    animation: anime-1 0.3s forwards; 
+}
+
+.main__button .swiper-button-next::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: url(../img/Arrow.svg) no-repeat;
+    width: 17px;
+    height: 30px;
+    animation: anime-4 0.6s forwards;
+}
+
+.main__button .swiper-button-next:hover::before {
+    animation: anime-2 0.6s forwards;
+}
+
+.main__button .swiper-button-prev::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: url(../img/Arrow.svg) no-repeat;
+    width: 17px;
+    height: 30px;
+    animation: anime-4 0.6s forwards;
+}
+
+.main__button .swiper-button-prev:hover::before {
+    animation: anime-2 0.6s forwards; 
 }
 
 .main__pagination {
