@@ -96,6 +96,10 @@ body {
     width: 100%;
 }
 
+.button__burger:hover {
+    opacity: 0.8;
+}
+
 .button__header {
     position: relative;
     white-space: nowrap;
@@ -293,6 +297,10 @@ body {
     height: 24px;
 }
 
+.header__logotype:hover {
+    opacity: 0.8;
+}
+
 .header__phone {
     display: flex;
     flex-direction: column;
@@ -306,6 +314,10 @@ body {
     line-height: 78%;
     white-space: nowrap;
     text-decoration: none;
+}
+
+.header__telephone:hover {
+    opacity: 0.8;
 }
 
 .header__svg {
@@ -643,6 +655,10 @@ body {
 }
 
 @media (max-width: 1024px) {
+    .button__header:hover .header__stroke {
+        stroke: #293743;
+    }
+
     .header__main {
         justify-content: space-between;
     }
