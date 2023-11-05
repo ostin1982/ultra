@@ -563,10 +563,10 @@ body {
 
 .main__info {
     position: absolute;
-    bottom: 130px;
+    bottom: 0;
     left: 32px;
     right: 32px;
-    border: 2px solid #FFFFFF;
+    padding-bottom: 130px;
     z-index: 1;
 }
 
@@ -576,6 +576,7 @@ body {
     align-items: flex-start;
     padding: 60px 28px;
     gap: 16px;
+    border: 2px solid #FFFFFF;
 }
 
 .main__block-left {
@@ -638,7 +639,7 @@ body {
     }
 
     .main__info {
-        bottom: 110px;
+        padding-bottom: 110px;
     }
 
     .main__content {
@@ -763,7 +764,7 @@ body {
     .main__info {
         left: 16px;
         right: 16px;
-        bottom: 94px;
+        padding-bottom: 94px;
     }
 
     .main__content {
