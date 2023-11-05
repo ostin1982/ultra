@@ -5,6 +5,8 @@ const wrapperHeader = body.querySelector('.js-wrapper-header');
 const scrollObservers = document.querySelectorAll('.observer');
 let menuActive = false;
 
+const scrollWidth = window.innerWidth - body.offsetWidth + 'px';
+
 const anime = lottie;
 
 anime.loadAnimation({
@@ -23,12 +25,14 @@ burgerButton.addEventListener('click', (event) => {
         wrapperHeader.classList.add('header__wrapper_active');
         body.classList.add('body_lock');
         anime.goToAndStop(18, true);
+        body.style.paddingRight = scrollWidth;
         menuActive = true;
     } else {
         menuHeader.classList.remove('header__menu_active');
         wrapperHeader.classList.remove('header__wrapper_active');
         body.classList.remove('body_lock');
         anime.stop();
+        body.style.paddingRight = '0px'
         menuActive = false;
     }
     
