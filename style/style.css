@@ -134,11 +134,11 @@ body {
     position: relative;
     top: 0;
     left: 0;
-    animation: anime-6 0.3s forwards;
+    animation: anime-6 0.3s ease-in-out forwards;
 }
 
 .button__main:hover .button__main_svg {
-    animation: anime-5 0.3s forwards;
+    animation: anime-5 0.3s ease-in-out forwards;
 }
 
 .header {
@@ -432,7 +432,7 @@ body {
     height: 100vh;
     display: block;
     position: absolute;
-    background: linear-gradient(180deg, rgba(17, 27, 35, 0.60) 0%, rgba(25, 39, 50, 0.00) 51.8%);
+    background: linear-gradient(180deg,rgba(16,23,29,.7),rgba(16,23,29,.373159) 31.62%,rgba(16,23,29,0) 74.88%),linear-gradient(0deg,rgba(16,23,29,.6),rgba(16,23,29,.2) 140px,rgba(16,23,29,0));;
 }
 
 .main__img {
@@ -506,11 +506,11 @@ body {
     width: 17px;
     height: 30px;
     left: 0;
-    animation: anime-3 0.3s forwards; 
+    animation: anime-3 0.3s ease-in-out forwards; 
 }
 
 .main__button .swiper-button-next:hover::after {
-    animation: anime-1 0.3s forwards; 
+    animation: anime-1 0.3s ease-in-out forwards; 
 }
 
 .main__button .swiper-button-prev::after {
@@ -520,11 +520,11 @@ body {
     width: 17px;
     height: 30px;
     left: 0;
-    animation: anime-3 0.3s forwards; 
+    animation: anime-3 0.3s ease-in-out forwards; 
 }
 
 .main__button .swiper-button-prev:hover::after {
-    animation: anime-1 0.3s forwards; 
+    animation: anime-1 0.3s ease-in-out forwards; 
 }
 
 .main__button .swiper-button-next::before {
@@ -535,11 +535,11 @@ body {
     background: url(../img/Arrow.svg) no-repeat;
     width: 17px;
     height: 30px;
-    animation: anime-4 0.6s forwards;
+    animation: anime-4 0.6s ease-in-out forwards;
 }
 
 .main__button .swiper-button-next:hover::before {
-    animation: anime-2 0.6s forwards;
+    animation: anime-2 0.6s ease-in-out forwards;
 }
 
 .main__button .swiper-button-prev::before {
@@ -550,11 +550,11 @@ body {
     background: url(../img/Arrow.svg) no-repeat;
     width: 17px;
     height: 30px;
-    animation: anime-4 0.6s forwards;
+    animation: anime-4 0.6s ease-in-out forwards;
 }
 
 .main__button .swiper-button-prev:hover::before {
-    animation: anime-2 0.6s forwards; 
+    animation: anime-2 0.6s ease-in-out forwards; 
 }
 
 .main__pagination {
